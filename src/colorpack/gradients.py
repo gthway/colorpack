@@ -64,6 +64,11 @@ def shades(color:str, n:int =6,*, lightest:float = 0.85,darkest:float =0.25) -> 
     """
     Returns n different shades of the input color.
     """
+    if n < 2:
+        raise ValueError("n must be at least 2.")
+    if not (0 < darkest < lightest < 1):
+        raise ValueError("Must satisfy 0 < darkest < lightest < 1.")
+    
     r,g,b = _parse_color(color)
     h, _, s = colorsys.rgb_to_hls(r,g,b)
 
@@ -75,3 +80,12 @@ def shades(color:str, n:int =6,*, lightest:float = 0.85,darkest:float =0.25) -> 
         r,g,b = colorsys.hls_to_rgb(h,l,s)
         result.append(_rgb_to_hex(r,g,b))
     return result
+
+def diverging(low:str,high:str,n:int=7,mid:str='#FFFFFF'):
+    """    
+    Gives a diverging gradient from two input colors.    
+    """    
+    half = n+1//2
+    left = gradient(low,mid,half)
+    right = gradient(mid,high,half)
+    return left + right[1:]
