@@ -3,22 +3,28 @@ from typing import List, Tuple
 
 from .palettes import COLORS
 
+def _sense_colorhex(color:str) -> str:
+    """    
+    Returns the hex string of a named color in colorpack.COLORS.
+    """    
+    lookup = color.lower()
+    if lookup in COLORS:
+        hexcode = COLORS[lookup]
+    else:
+        raise ValueError(
+            f"Unknown color name '{color}'."
+            f"Use a hexstring or a color available in COLORS."
+        )
+    return hexcode
+
 def _parse_color(color: str) -> Tuple[float,float,float]:
     """
     Accepts either a named color in colorpack.COLORS or a hex string and coverts it into a RGB tuple with values between [0,1].
     """
 
     if not color.startswith('#'):
-        lookup = color.lower()
-        if lookup in COLORS:
-            color = COLORS[lookup]
-        else:
-            raise ValueError(
-                f"Unknown color name '{color}'."
-                f"Use a hexstring or a color available in COLORS."
-            )
+        color = _sense_colorhex(color)
 
-    
     color = color.lstrip('#')
     if len(color) != 6:
         raise ValueError(f"Invalid hex color '{color}'. Expected format: #RRGGBB")
