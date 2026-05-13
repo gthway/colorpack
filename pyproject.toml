@@ -7,6 +7,7 @@ name = "colorpack"
 version = "0.1.0"
 description = ""
 readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.13"
 dependencies = [
     "matplotlib>=3.5",

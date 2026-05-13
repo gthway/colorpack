@@ -47,6 +47,10 @@ The `ColorSet` object allows easy use with matplotlib. You can create a colorset
 ```python
 cs = ColorSet('muted')
 print(cs,cs.name,cs.colors,len(cs))
+print(cs.pick(5)) # Pick 5 colors from the palette
+print(cs.evenly_spaced(5)) # Pick 5 colors that are evenly spaced
+print(cs.random(5)) # Pick 5 colors at random
+
 # Or use with the list created from shades
 cs = ColorSet('shades_of_red')
 print(cs,cs.name,cs.colors,len(cs))
