@@ -101,7 +101,7 @@ class ColorSet:
                 "The 'cycler' package is required. "
                 "Install it with: pip install cycler"
             )
-        colors = self._colors if n is None else self.pick(n)
+        colors = self.colors if n is None else self.pick(n)
         return _cycler(color=colors)
 
     def apply_to_axes(self, ax, n: Optional[int] = None) -> None:

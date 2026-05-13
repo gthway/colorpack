@@ -1,5 +1,5 @@
 from .palettes import PALETTES, PALETTE_NAMES, COLORS
-from .gradient import shades, gradient, diverging
+from .gradients import shades, gradient, diverging
 from .colorset import ColorSet
 
 __all__ = [

@@ -12,6 +12,7 @@ directly to matplotlib.
 
 COLORS = {
     # Blues
+    "blue":         "#0000FF",
     "cobalt":       "#0047AB",
     "sky":          "#87CEEB",
     "navy":         "#001F5B",
@@ -20,6 +21,7 @@ COLORS = {
     "teal":         "#008080",
     "cyan":         "#00BCD4",
     # Greens
+    "green":        "#00FF00",
     "emerald":      "#50C878",
     "olive":        "#6B8E23",
     "sage":         "#8FAF8F",
@@ -27,6 +29,7 @@ COLORS = {
     "forest":       "#228B22",
     "lime":         "#B5E550",
     # Reds / pinks
+    "red":          "#FF0000",
     "crimson":      "#DC143C",
     "rose":         "#FF6B8A",
     "blush":        "#FFB7C5",

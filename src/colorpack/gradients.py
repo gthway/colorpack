@@ -52,7 +52,7 @@ def gradient(start:str, end:str, n:int = 6) -> List[str]:
     Returns a linearly interpolated gradient of n colors.
     """
     if n < 2:
-        raise ValueError(f"n cannot must be at least 2 colors")
+        raise ValueError(f"n must be at least 2 colors")
     r1,g1,b1 = _parse_color(start)
     r2,g2,b2 = _parse_color(end)
 
