@@ -2,10 +2,6 @@
 
 This is a small utility package in Python to help with colors while plotting especially with **matplotlib**.
 
-## Features
-
-- Top level functions to create gradients and different shades of a color
-- Easy integration into matplotlib
 
 ## Installation
 
