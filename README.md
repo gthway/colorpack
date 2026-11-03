@@ -9,12 +9,10 @@ This is a small utility package in Python to help with colors while plotting esp
 
 ## Installation
 
-Clone the GitHub repo and pip install:
+Pip install from the repo:
 
 ```bash
-git clone https://github.com/gthway/colorpack.git
-cd colorpack
-pip install -e .
+pip install https://github.com/gthway/colorpack.git
 ```
 
 ## Quickstart
