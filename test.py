@@ -1,5 +1,7 @@
 from colorpack.gradients import _parse_color, _rgb_to_hex, gradient, shades, diverging
+from colorpack.palettes import COLORS, PALETTES
+from colorpack.colorset import ColorSet
 
-print(gradient('#FF0000','#0000FF',5))
-print(shades('#FF0000',5))
-print(diverging('#FF0000','#0000FF'))
+print(shades('red',5))
+print(gradient('red','blue',7))
+print(diverging('red','blue',5))
